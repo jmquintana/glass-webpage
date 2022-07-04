@@ -27,7 +27,7 @@ h3 {
 main {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
-    background: linear-gradient(to right top, #65dfc9 0%, #6cdbeb 100%);
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +36,7 @@ main {
 .glass {
     background: white;
     min-height: 80vh;
-    width: 60%;
+    min-width: 60%;
     background: linear-gradient(to right bottom,
             rgba(255, 255, 255, 0.7),
             rgba(255, 255, 255, 0.3));
@@ -102,7 +102,7 @@ main {
 }
 
 .games {
-    flex: 2;
+    flex: auto;
 }
 
 .pro {
@@ -170,7 +170,7 @@ main {
     overflow: hidden;
 }
 
-.progress::after {
+.card1 .progress::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -179,16 +179,25 @@ main {
     left: 60%;
 }
 
-.progress::after {
+.card2 .progress::after {
     content: "";
     width: 100%;
     height: 100%;
     background: rgb(236, 236, 236);
     position: absolute;
-    left: 60%;
+    left: 35%;
 }
 
-.card1.progress::after {
+.card3 .progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 75%;
+}
+
+/* .card1.progress::after {
     left: 60%;
 }
 
@@ -198,13 +207,19 @@ main {
 
 .card3.progress::after {
     left: 75%;
-}
+} */
 
 .card-info {
     display: flex;
     flex-direction: column;
+    width: 70%;
     padding: 0rem 2rem;
     justify-content: space-between;
+}
+
+.card-info h2 {
+    white-space: nowrap;
+    /* word-wrap: break-word; */
 }
 
 .percentage {
